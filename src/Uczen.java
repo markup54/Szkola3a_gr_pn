@@ -1,4 +1,4 @@
-public class Uczen extends Osoba{
+public class Uczen extends Osoba implements Dyzurny{
     //klasa Uczen to klasa potomna dla klasy bazowej Osoba
     private int nr_ucznia;
     private static int liczbaUczniow; //do przechowywania liczby instancji klasy UCzen
@@ -6,6 +6,10 @@ public class Uczen extends Osoba{
     public Uczen(String imie, int wiek, int nr_ucznia) {
         super(imie, wiek);//odwołanie do konstruktora klasy bazowej
         this.nr_ucznia = nr_ucznia;
+        liczbaUczniow++;
+    }
+
+    public Uczen() {
         liczbaUczniow++;
     }
 
@@ -29,5 +33,19 @@ public class Uczen extends Osoba{
 
     public static void setLiczbaUczniow(int liczbaUczniow) {
         Uczen.liczbaUczniow = liczbaUczniow;
+    }
+
+    @Override
+    public String toString() {
+        return "Uczen{" +
+                "nr_ucznia=" + nr_ucznia +
+                "wiek= "+getWiek()+
+                ", imie='" + imie + '\'' +
+                "} " ;
+    }
+
+    @Override
+    public void wykonajDuzur() {
+        System.out.println("wytrzyj tablice");
     }
 }

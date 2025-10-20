@@ -2,7 +2,8 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Hello world!");
 
-        Osoba osoba1 = new Osoba(); //żeby utworzyć obiekt wywoływany jest konstruktor
+        Osoba osoba1 = new Uczen(); //żeby utworzyć obiekt wywoływany jest konstruktor
+
         System.out.println(osoba1.imie);
         osoba1.imie = "Jan";
         System.out.println(osoba1.imie);
@@ -11,5 +12,17 @@ public class Main {
         System.out.println(uczen);
         uczen.setWiek(14);
         System.out.println(uczen);
+
+        Uczen uczen1 = new Uczen("Fiona",10);
+        System.out.println(uczen1);
+        System.out.println("Liczba uczniow "+Uczen.getLiczbaUczniow()+"");
+        Uczen uczen2 = new Uczen("Szrek",15);
+        System.out.println(uczen2);
+        System.out.println("Liczba uczniow "+Uczen.getLiczbaUczniow()+"");
+        Nauczyciel nauczycielFizyki = new Nauczyciel("Edmund",70,"fizyka");
+        System.out.println(nauczycielFizyki);
+        nauczycielFizyki.wykonajDuzur();
+        uczen1.wykonajDuzur();
+        //polimorfizm
     }
 }

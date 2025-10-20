@@ -1,4 +1,7 @@
-public class Osoba {
+public abstract class Osoba {
+
+    //klasa abatsrakcyjna nie pozwala na utworzenie obiektu tej klasy
+    //może być wykorzystana do dziedziczenia
     public String imie; // publiczne pola i metody dostępne wszędzie
     private int wiek; // prywatne pola i metody dostępne tylko w tej klasie
     //hermetyzacja
